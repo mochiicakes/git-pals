@@ -1,0 +1,38 @@
+{
+  "data": {
+    "user": {
+      "y2025": {
+        "contributionCalendar": { "totalContributions": 480 },
+        "restrictedContributionsCount": 30
+      },
+      "y2026": {
+        "contributionCalendar": { "totalContributions": 52 },
+        "restrictedContributionsCount": 2
+      },
+      "recent": {
+        "contributionCalendar": {
+          "weeks": [
+            {
+              "contributionDays": [
+                { "date": "2026-02-24", "contributionCount": 2 },
+                { "date": "2026-02-25", "contributionCount": 0 },
+                { "date": "2026-02-26", "contributionCount": 3 },
+                { "date": "2026-02-27", "contributionCount": 1 },
+                { "date": "2026-02-28", "contributionCount": 2 }
+              ]
+            },
+            {
+              "contributionDays": [
+                { "date": "2026-03-01", "contributionCount": 4 },
+                { "date": "2026-03-02", "contributionCount": 0 }
+              ]
+            }
+          ]
+        }
+      },
+      "month": {
+        "totalCommitContributions": 4
+      }
+    }
+  }
+}

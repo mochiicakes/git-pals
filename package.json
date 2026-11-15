@@ -1,0 +1,39 @@
+{
+  "name": "git-pals",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A pixel-art virtual pet for your GitHub profile README, fed by your coding activity.",
+  "author": "Michaella Gonzales (mochiicakes)",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "assets": "tsx scripts/build-assets.ts",
+    "preview": "tsx scripts/preview.ts",
+    "build": "ncc build src/main.ts -o dist --minify --license licenses.txt",
+    "lint": "eslint . && prettier --check .",
+    "format": "prettier --write .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "all": "npm run assets && npm run lint && npm run typecheck && npm test && npm run build"
+  },
+  "dependencies": {
+    "@actions/core": "^3.0.1",
+    "@actions/exec": "^3.0.0",
+    "pngjs": "^7.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^20.19.43",
+    "@types/pngjs": "^6.0.5",
+    "@vercel/ncc": "^0.45.0",
+    "eslint": "^10.15.0",
+    "prettier": "^3.10.1",
+    "tsx": "^4.23.15",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.72.2",
+    "vitest": "^4.1.12"
+  }
+}

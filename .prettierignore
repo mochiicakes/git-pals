@@ -1,0 +1,6 @@
+dist/
+preview/
+node_modules/
+src/assets.ts
+test/__snapshots__/
+package-lock.json

@@ -1,0 +1,5 @@
+* text=auto eol=lf
+*.png binary
+dist/** -diff linguist-generated=true
+src/assets.ts -diff linguist-generated=true
+test/__snapshots__/** -diff linguist-generated=true

@@ -1,0 +1,52 @@
+name: git-pals
+description: A pixel-art virtual pet for your profile README that grows and changes mood with your GitHub activity.
+author: Michaella Gonzales (mochiicakes)
+branding:
+  icon: heart
+  color: purple
+
+inputs:
+  github_token:
+    description: Token used to read your activity. The default GITHUB_TOKEN covers public activity.
+    required: false
+    default: ${{ github.token }}
+  username:
+    description: GitHub user whose activity feeds the pet. Defaults to the repository owner.
+    required: false
+    default: ${{ github.repository_owner }}
+  pet_name:
+    description: Pet name, used in the image description.
+    required: false
+    default: Pal
+  species:
+    description: Which pet to draw (betta).
+    required: false
+    default: betta
+  window:
+    description: Window frame (hydrangea, clover or classic).
+    required: false
+    default: hydrangea
+  background:
+    description: Screen background (night, dusk, sky or rose).
+    required: false
+    default: night
+  output_path:
+    description: Where to write the SVG, relative to the repository root.
+    required: false
+    default: dist/git-pal.svg
+  include_private:
+    description: Count private contributions when the token can see them.
+    required: false
+    default: 'false'
+  commit:
+    description: Commit and push the SVG when it changes. Set to false to only write the file.
+    required: false
+    default: 'true'
+  commit_message:
+    description: Commit message used when the SVG changes.
+    required: false
+    default: 'chore: feed git-pal'
+
+runs:
+  using: node24
+  main: dist/index.js
